@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #EAE7DC;
+  font-family: "Sansita Swashed", cursive;
+}
+
+.center {
+  position: relative;
+  padding: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+}
+
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid #C30E59;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.center .inputbox {
+  position: relative;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.center .inputbox input,
+.center .inputbox textarea {
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+.center .inputbox textarea {
+  resize: none;
+  height: 100px;
+}
+
+.center .inputbox input[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  background: #C30E59;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+}
+
+.center .inputbox input[type="submit"]:hover,
+.center .inputbox input[type="submit"]:focus {
+  background: #FAF7F0;
+  color: #C30E59;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

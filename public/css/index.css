@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.hero{
+    height: 80%;
+    width: 100%;
+    background-image: url("../images/heroImage.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -180px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.heroText{
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+}
+
+.heroText .title{
+    font-size: 5.5rem;
+    max-width: 400px;
+    color: #C30E59;
+    font-weight: 900;
+}
+
+.catchPhrase{
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+    text-align: left;
+    max-width: 300px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #481E14;
+}
+
+
+.trendingBlock , .recentBlock{
+    width: 100%;
+    height: 80%;
+    background-color: rgb(234, 231, 220);
+}
+
+.blockTitle{
+    color: #8E8D8A;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+.carousel{
+    width: 100%;
+    height: 75%;
+    border-top: 3px solid #C30E59;
+    border-bottom: 3px solid #C30E59;
+    background: linear-gradient(to right, 
+    #8a6a4f, 
+    #7d5f46, 
+    #705543, 
+    #664f3d,
+    #544032  
+);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.gridContainer , .gridContainer2{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat( 4 , minmax(200px , 1fr));
+    grid-template-rows: 330px;
+    column-gap: 2rem;
+    overflow-y: scroll;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(200px , 1fr);
+    scrollbar-width: none;
+}
+
+.box{
+    background-color: #fff;
+    scroll-snap-align: start;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 10px;
+    scroll-snap-align: start;
+}
+
+.cardImg{
+    background-image: url("../images/book.jpg");
+    background-position: center center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 200px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardTitle{
+    font-size: 1.2rem;
+    padding-top: 0.6rem;
+    padding-left: 0.2rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.cardText{
+    font-size: 1rem;
+    padding-top: 0.6rem;
+    padding-left: 0.2rem;
+}
+
+.box .view{
+    padding-top: 0.8rem;
+    padding-left: 0.2rem;
+}
+
+.box a:link{
+    text-decoration: none;
+}
+
+
+.navbtns{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.navbtns button{
+    width: 30px;
+    height: 30px;
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: color 100ms;
+    touch-action: manipulation;
+}
+
+.navbtns i {
+    font-size: 1.3rem;
+}
+
+
+.navbtns button:hover{
+  background-color: #F082AC;
+}
+
+
+.footerdiv{
+    position: relative;
+    height: 50%;
+    background-color: rgb(234, 231, 220);
+}
+
+
+@media screen and (max-width : 600px){
+
+    .heroText{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .heroText .title{
+        font-size: 4rem;
+        max-width: 500px;
+    }
+
+    .catchPhrase{
+        padding: 0;
+        text-align: center;
+        max-width: 500px;
+    }
+
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blockTitle{
+        padding-left: 0;
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 450px){
+    .heroText .title{
+        font-size: 3rem;
+        max-width: 400px;
+    }
+
+    .catchPhrase{
+        font-size: 1rem;
+        padding: 0;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .trendingBlock .title{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .navbtns{
+        display: none;
+    }
+
+    .gridContainer , .gridContainer2{
+        grid-template-columns: repeat(auto-fit , minmax(350px , 1fr));
+        grid-auto-columns: minmax(350px , 1fr);
+    }
+
+    .cardImg{
+        width: 350px;
+        background-position: center -75px;
+    }
+
+    .cardTitle{
+        font-size: 1.4rem;
+    }
+
+    .cardText{
+        padding-top: 1.2rem;
+        font-size: 1.2rem;
+    }
+
+    .box .view{
+        font-size: 1.1rem;
+    }
+}
+

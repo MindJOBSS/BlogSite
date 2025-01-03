@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>main</title>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body>
+    
+    <%- include("partials/navbar.ejs"); %>
+    <div class="navSpace"></div>
+
+    <div class="blogProfile">
+        <div class="profile shadow">
+            <div class="profileImg"></div>
+            <div class="profileGreeting">
+                <% if (time <= 6) { %>
+                    Good Morning!
+                    <% } else if (time <= 18) { %>
+                        Good Evening!
+                        <% }else { %>
+                            Welcome
+                            <% } %>
+            </div>
+            <div class="profileName">
+                Aizen
+            </div>
+
+            <div class="profileBio">
+                Captain of the 5th Division in the Gotei 13, Lord of Hueco Mundo
+            </div>
+
+            <div class="profileDesc">
+                Power is not given; it is taken. And I take it with absolute resolve.
+            </div>
+        </div>
+
+        <div class="blog shadow">
+            <div class="blogbtns">
+                <div class="edit">
+                    <button><i class="fa-regular fa-pen-to-square"></i>Edit</button>
+                </div>
+                <div class="new">
+                    <a href="/blog"><button><i class="fa-solid fa-plus"></i>New</button></a>
+                </div>
+            </div>
+            <div class="mainContent">
+                <% if (blog && blog.length > 0) { %>
+                    <% blog.forEach((item) => { %>
+                        <div class="blogBox">
+                            <div class="blogTitle">
+                                <%= item.title %>
+                            </div>
+                            <div class="blogContent">
+                                <%= item.content %>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } %>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footerdiv">
+        <%- include("partials/footer.ejs"); %>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

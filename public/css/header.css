@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.navbar{
+    position: fixed;
+    height: 12%;
+    width: 100%;
+    background-color: rgba(234, 231, 220, 0.8);
+    border-bottom: 4px inset #D8C3A5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: "Poppins", sans-serif;
+    z-index: 2;
+}
+
+.navlinks ul{
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navlinks a:link{
+    text-decoration: none;
+}
+
+.navlinks a{
+    cursor: pointer;
+    color: #8E8D8A;
+    font-size: 1.4rem;
+}
+
+.loginButton button{
+    width: 5rem;
+    height: 2.2rem;
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #C30E59;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.navbar .title{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #C30E59;
+}
+
+.title span{
+    color: #8E8D8A;
+}
+
+
+.loginButton button:hover,
+.loginButton button:focus {
+  background-color: #FAF7F0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.loginButton button:hover {
+  transform: translateY(-1px);
+}
+
+.loginButton button:active {
+  background-color: #FAF7F0;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.menuButton {
+    cursor: pointer;
+    position: absolute;
+    top: 1.1rem;
+    right: 1rem;
+    background: transparent;
+    color: #8E8D8A;
+    border: 2px solid;
+    width: 3rem;
+    height: 3rem;
+    display: none;
+}
+
+.menuButton span{
+    font-size: 2.5rem;
+}
+
+
+
+.menuButton:hover {
+  border-color: #C30E59;
+  color: #C30E59;
+  fill: #C30E59;
+}
+
+.menuButton:active {
+  border-color: #C30E59;
+  color: #C30E59;
+  fill: #C30E59;
+}
+
+.contact{
+    padding-top: 0.23rem;
+    background: transparent;
+    border: none;
+
+}
+
+@media screen and (max-width : 600px){
+    .navlinks{
+        display: none;
+    }
+
+    .menuButton{
+        display: block;
+    }
+
+    .navlinks.open {
+        display: block;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .navbar .title{
+        padding-top: 1rem;
+    }
+
+    .navlinks , .navlinks ul{
+        width: 100%;
+    }
+
+    .navlinks ul{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: #D8C3A5;
+    }
+
+    .navlinks li{
+        width: 100%;
+        border-bottom: 2px solid #8E8D8A;
+    }
+}
